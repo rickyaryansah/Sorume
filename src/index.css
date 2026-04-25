@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-ocean: #002B5B;
+  --color-emerald: #006241;
+  --color-gold: #C5A059;
+  --color-cream: #fdfbf7;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  body {
+    @apply font-sans text-slate-800 bg-white antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.bg-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23C5A059' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
